@@ -1,7 +1,7 @@
 const express = require('express')
 const supabaseClient = require('@supabase/supabase-js')
 const bodyParser = require('body-parser');
-//const { isValidStateAbbreviation } = require('usa-state-validator');
+const { isValidStateAbbreviation } = require('usa-state-validator');
 
 const app = express()
 const port = 3000
@@ -12,6 +12,10 @@ app.use(express.static(__dirname + '/public'))
 const supabaseUrl = 'https://faylmhkfwyiqvipbktdo.supabase.co'
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZheWxtaGtmd3lpcXZpcGJrdGRvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM0NDk5MDMsImV4cCI6MjA0OTAyNTkwM30.LegzASHCfoyoneaQ2VdRgY7z0rDEOWMv7t4gGiZXqTY'
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey)
+
+app.get('/', (req, res) => {
+    res.sendFile('search.html', { root: __dirname });
+  });
 
 app.get('/users', async (req, res) => {
     console.log('Attempting to get all users')
@@ -40,16 +44,16 @@ app.post('/user', async (req, res) => {
 
     console.log('Request', req.body);
 
-    // //     if(!isValidStateAbbreviation(userState)) {
-    // //     console.error(`State ${userState} is Invalid :(`);
-    // //     res.statusCode = 400;
-    // //     res.header('Content-Type', 'application/json');
-    // //     const stateInvalidErrorJson = {
-    // //         message: `${userState} is not a valid State Abbreviation`,
-    // //     };
-    // //     res.send(JSON.stringify(stateInvalidErrorJson));
-    // //     return;
-    // // }
+        if(!isValidStateAbbreviation(userState)) {
+        console.error(`State ${userState} is Invalid :(`);
+        res.statusCode = 400;
+        res.header('Content-Type', 'application/json');
+        const stateInvalidErrorJson = {
+            message: `${userState} is not a valid State Abbreviation`,
+        };
+        res.send(JSON.stringify(stateInvalidErrorJson));
+        return;
+    }
 
     const { data, error } = await supabase
         .from('users')
