@@ -1,0 +1,36 @@
+
+#main-nav {
+    background-color: lightblue;
+    text-align: center;
+}
+  
+#main-nav li:hover {
+    background-color: lavender;
+    color: black;
+}
+  
+#main-nav li {
+    display: inline-block;
+    position: relative;
+}
+  
+#main-nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+  
+body {
+    background-color: aliceblue;
+    padding: 20px;
+}
+
+#pageTitle {
+    text-align: center;
+}
