@@ -1,5 +1,7 @@
 
 #main-nav {
+    
+    font-weight: bold;
     background-color: lightblue;
     text-align: center;
 }
@@ -8,7 +10,7 @@
     background-color: lavender;
     color: black;
 }
-  
+
 #main-nav li {
     display: inline-block;
     position: relative;
@@ -41,8 +43,8 @@ body {
     right: 20px;
     top: 20px;
     margin-right: 20px;
-    background-color: lavender;
-    border: 1px solid black;
+    
+    
     border-radius: 5px;
     padding: 20px;
 }
@@ -53,8 +55,36 @@ body {
     right: 20px;
     top: 20px;
     float: right;
-    background-color: white;
-    border: 1px solid black;
+    
     border-radius: 5px;
     padding: 20px;
+}
+
+.question {
+    background-color: #F2C6DE;
+    border: 2px black solid;
+    padding: 10px;
+}
+
+.list {
+    padding: 10px;    
+    margin: 10px;
+}
+
+
+#movieList li {
+    margin: 10px;
+}  
+
+.iup {
+    border: 2px black solid;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #C9E4DE;
+}
+
+.upl {
+    border: 2px black solid;
+    padding: 10px;
+    background-color: #C6DEF1;
 }

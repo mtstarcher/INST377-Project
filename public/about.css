@@ -27,14 +27,13 @@ a {
 }
   
 body {
-    background-color: darkcyan;
+    
     padding: 20px;
 }
 
 #pageTitle {
     background-color: white;
     text-align: center;
-    border: 1px black solid;
 }
 
 
