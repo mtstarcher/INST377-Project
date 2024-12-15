@@ -28,8 +28,33 @@ a {
   
 body {
     background-color: aliceblue;
+    padding: 20px;
 }
 
 #pageTitle {
     text-align: center;
+}
+
+.movieSearch {
+    width: 70%;
+    position: relative;
+    right: 20px;
+    top: 20px;
+    margin-right: 20px;
+    background-color: lavender;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#userAside {
+    width: 20%; 
+    position: relative;
+    right: 20px;
+    top: 20px;
+    float: right;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
 }
