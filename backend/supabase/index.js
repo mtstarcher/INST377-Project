@@ -17,7 +17,12 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey)
 
 app.get('/', (req, res) => {
-    res.sendFile('search.html', { root: __dirname });
+    res.sendFile('home.html', { root: __dirname });
+});
+
+// making server
+app.listen(port, 'localhost', () => {
+    console.log(`Server is running on http://localhost:${port}/`);
 });
 
 app.get('/users', async (req, res) => {
