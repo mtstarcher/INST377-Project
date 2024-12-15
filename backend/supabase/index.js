@@ -5,8 +5,8 @@ const { isValidStateAbbreviation } = require('usa-state-validator');
 
 const path = require('path'); // new addition
 
-const app = express()
-const port = 3000
+const app = express();
+const port = 3000;
 
 app.use(bodyParser.json());
 // app.use(express.static(__dirname + '/public'));
