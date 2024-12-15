@@ -27,10 +27,45 @@ a {
 }
   
 body {
-    background-color: aliceblue;
+    background-color: darkcyan;
     padding: 20px;
 }
 
 #pageTitle {
+    background-color: white;
     text-align: center;
+    border: 1px black solid;
+}
+
+
+.students {
+    background-color: lightblue;
+    display: inline-block;
+    border: 2px black solid;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 20px;
+    margin-top:10px;
+}
+
+.info {
+    text-align: center;
+}
+#name {
+    border-bottom: 2px black solid;
+}
+
+#github {
+    text-decoration:underline;
+    color: blue;
+}
+
+.project {
+    display:inline-block;
+    border: 2px black solid;
+    background-color: antiquewhite;
+}
+
+li {
+    font-weight: bold;
 }
