@@ -17,3 +17,5 @@ This is a web application that allows users to explore the most popular movies c
 - **Frontend**: HTML, CSS, JavaScript, React
 - **Backend**: Node.js and Express 
 - **API**: The Movie Database (TMDB) API
+
+For developers: [DEVELOPER MANUAL](https://github.com/mtstarcher/INST377-Project/blob/main/Docs/DEVELOPER_MANUAL.md)
