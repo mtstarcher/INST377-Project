@@ -1,5 +1,5 @@
-const express = require('express')
-const supabaseClient = require('@supabase/supabase-js')
+const express = require('express');
+const supabaseClient = require('@supabase/supabase-js');
 const bodyParser = require('body-parser');
 const { isValidStateAbbreviation } = require('usa-state-validator');
 
@@ -10,15 +10,14 @@ const port = 3000;
 
 app.use(bodyParser.json());
 // app.use(express.static(__dirname + '/public'));
-app.use(express.static(path.join(__dirname + 'INST377-Project')));
+app.use(express.static(path.join(__dirname)));
 
 const supabaseUrl = 'https://faylmhkfwyiqvipbktdo.supabase.co'
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZheWxtaGtmd3lpcXZpcGJrdGRvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM0NDk5MDMsImV4cCI6MjA0OTAyNTkwM30.LegzASHCfoyoneaQ2VdRgY7z0rDEOWMv7t4gGiZXqTY'
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey)
 
 app.get('/', (req, res) => {
-    // res.sendFile('search.html', { root: __dirname });
-    res.sendFile('home.html', { root: path.join(__dirname, 'INST377-Project') });
+    res.sendFile('search.html', { root: __dirname });
 });
 
 app.get('/users', async (req, res) => {
