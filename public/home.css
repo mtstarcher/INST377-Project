@@ -1,123 +1,127 @@
-
 #main-nav {
-    font-weight: bold;
-    background-color: lightblue;
-    text-align: center;
-}
-  
-#main-nav li:hover {
-    background-color: lavender;
-    color: black;
-}
-  
-#main-nav li {
-    display: inline-block;
-    position: relative;
-}
-  
-#main-nav ul li {
-    list-style-type: none;
-    display: inline-block;
-    padding: 10px;
-    text-align: center;
+  background-color: rgb(0,0,0);
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  width:100%;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+#main-nav li:hover {
+color: white;
+transform: scale(1.2);
+text-shadow: none;
+background-color: rgb(101,8,8);
 }
-  
-body {
-    background-color: lightcyan;
+
+#main-nav li {
+  display: inline-block;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+#main-nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
 }
 
 #pageTitle {
-    text-align: center;
+margin-top: 75px;
+text-align: center
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-color: rgb(18,18,18);
+  font-family: 'Roboto';
+  color: white;
+  padding: 20px;
+  margin: 0;
+  animation: fadeIn 1s ease-in-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
 
 
 /* Swiper container Styling (Some elements below do not appear on HTML file since they are being created in JS */
 
 /* Entire swiper container */
 .swiper-container {
-  padding: 10px;
+width: 100%;
+height: 600px;
+padding: 20px;
 }
 
 /* Area where the slides of the movie pictures go */
 .swiper-wrapper {
-  display: flex;
-  gap: 1px;
+display: flex;
+gap: 10px;
 }
 
 /* Movie Object box (created dynamically in JS) */
 .movieObjectBox {
-  width: 300px;
-  height: 450px;
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #333;
-  position: relative;
+width: 300px;
+height: 450px;
+border-radius: 10px;
+overflow: hidden;
+background-color: #333;
+position: relative;
 }
 
 /* Movie Poster Image */
 .movieObjectBox img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+width: 100%;
+height: 100%;
+object-fit: cover;
 }
 
 /* Title on Movie Poster */
 .movieTitleBox {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.6);
-  font-size: 18px;
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 5px;
+position: absolute;
+bottom: 10px;
+left: 10px;
+color: white;
+background-color: rgb(126,12,12);
+font-size: 18px;
+font-weight: bold;
+padding: 5px 10px;
+border-radius: 5px;
 }
 
 /* Swiper Nav Buttons */
 .swiper-button-next, .swiper-button-prev {
-  color: #fff;
-}
-
-body {
-  padding: 20px;
-  margin: 0;
+color: #fff;
 }
 
 /* Row at Bottom where you can click on whatever number in the sequence and be redirected to it */
 /* this might be removed later though, but whomever is working on the frontend JS will take care of it */
 .swiper-pagination {
-  margin-top: 100px;
-}
-
-#movieTable th, tr {
-  font-weight: bold;
-  gap: 10px;
-  background-color: bisque;
-  border : 2px black solid;
-}
-
-tbody tr, td{
-  text-align:center;
-  gap: 20px;
-  background-color: lightskyblue;
-  border: 2px black solid;
+position: top;
 }
 
 #movieTable {
-  width: 100%;
-  margin-top:20px;
-  margin-left: auto;
-  margin-right: auto;
-}
+text-align: center;
+margin: 25px 0;
+width: 100%;
 
-#t20tm {
-  text-align: center;
 }
-
 
