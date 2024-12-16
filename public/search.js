@@ -4,6 +4,7 @@ const apiSearchURL = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey
 
 let movies = [];
 let index;
+const host = window.location.origin;
 
 // Creating a Lunr.js index
 function createIndex(movies) {
@@ -62,7 +63,7 @@ async function submitUserData(event) {
         moviesLiked
     };
 
-    const response = await fetch('http://localhost:3000/user', {
+    const response = await fetch(`${host}/user`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -82,7 +83,7 @@ async function submitUserData(event) {
 
 // Show past data (user preferences/recommendations)
 async function showUserPreferences() {
-    const response = await fetch('http://localhost:3000/users'); // Fetching users from our server
+    const response = await fetch(`${host}/users`); // Fetching users from our server
 
     const users = await response.json();
     const userList = document.getElementById('userList');
