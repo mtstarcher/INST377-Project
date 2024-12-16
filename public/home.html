@@ -4,6 +4,7 @@
         <title>Home</title>
         <link rel="stylesheet" href="home.css">
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
         <script src="home.js" defer></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
     </head>
@@ -13,13 +14,15 @@
         <!-- Nav Section -->
         <nav id="main-nav">
             <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="search.html">Search</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="search.html">SEARCH</a></li>
+                <li><a href="about.html">ABOUT</a></li>
             </ul>
         </nav>
 
         <h1 id="pageTitle">Trending Movies</h1>
+
+        <h2>Top 20 Trending Movies</h2>
         
         <!-- Swiper for Movies (referenced from JS library: https://swiperjs.com/swiper-api#swiper-full-html-layout)-->
         <div class="swiper-container"> 
@@ -37,7 +40,6 @@
         <br>
 
         <!-- Table for Movie information from Swiper -->
-        <h2 id="t20tm">Top 20 Trending Movies</h2>
         <table id="movieTable"> <!-- Do not change table ID, needs to stay as is to work for JS -->
             <thead>
                 <tr>

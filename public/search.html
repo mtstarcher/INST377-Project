@@ -3,6 +3,7 @@
     <head>
         <title>Search</title>
         <link rel="stylesheet" href="search.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
         <script src="search.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script> <!-- Lunr.js library -->
     </head>
@@ -12,9 +13,9 @@
         <!-- Nav Section -->
         <nav id="main-nav">
             <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="search.html">Search</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="search.html">SEARCH</a></li>
+                <li><a href="about.html">ABOUT</a></li>
             </ul>
         </nav>
 
@@ -22,56 +23,44 @@
         
         <!-- Supabase Write Data to/Retrieve Data from Database-->
         <aside id="userAside">
-            <div class="iup">
-                <h2>Input User Preferences</h2>
-                <p>Feel free to input your own movie preferences here and 
+            <h2>Input User Preferences</h2>
+            <p>Feel free to input your own movie preferences here and 
                 you'll be able to see them in the user preferences list below!</p>
-                <form id="userForm">
-                    <label for="firstName">First Name:</label>
-                    <input type="text" id="firstName" name="firstName" required>
-                    <br>
-                    <label for="lastName">Last Name:</label>
-                    <input type="text" id="lastName" name="lastName" required>
-                    <br>
-                    <label for="userState">State Abbreviation:</label>
-                    <input type="text" id="userState" name="userState" required>
-                    <br>
-                    <label for="moviesLiked">Liked Movies (separate by commas):</label>
-                    <input type="text" id="moviesLiked" name="moviesLiked" required>
-                    <br> 
-                    <br>
-                    <button type="submit">Submit</button>
-                </form>
+            <form id="userForm">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Type here..." required>
+                <br>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Type here..." required>
+                <br>
+                <label for="userState">State Abbreviation:</label>
+                <input type="text" id="userState" name="userState" placeholder="Type here..." required>
+                <br>
+                <label for="moviesLiked">Liked Movies (separate by commas):</label>
+                <input type="text" id="moviesLiked" name="moviesLiked" placeholder="Type here..." required>
+                <br> 
+                <br>
+                <button type="submit">SUBMIT</button>
+            </form>
             <div id="formResponseMessage"></div>
 
-            </div>
-            <div class="upl">
             <h2>Users Preferences List</h2>
             <p>Want to see what our other users like? 
                 Click the button below to see!</p>
             <button id="showUsersPreferences">Show Other Users Preferences</button>
             <ul id="userList"></ul>
-
-            </div>
-            
         </aside>
 
         <!-- Search Section -->
         <div class="movieSearch">
-            <div class="question">
-                <p>You can search for a movie name and see their title, release date, overview, and popularity number. 
+            <p>You can search for a movie name and see their title, release date, overview, and popularity number. 
                 Or if you can't remember the name of the movie, you can find it by searching for things like
                 a character's name or the release year of the movie as well.
                 With a search index implemented, search combinations are endless!</p>
-                <input type="text" id="searchBar" placeholder="Search for a movie..." />
-                <br>
-                <!-- <button id="searchSubmit">Search</button> -->
-                <button id="searchSubmit" onclick="searchMovies()">Search</button>
-            </div>
-            <div class="list">
-                <ul id="movieList"></ul>
-
-            </div>
+            <input type="text" id="searchBar" placeholder="Search for a movie..." />
+            <!-- <button id="searchSubmit">Search</button> -->
+            <button id="searchSubmit" onclick="searchMovies()">SEARCH MOVIE</button>
+            <ul id="movieList"></ul>
         </div>
 
     </body>
